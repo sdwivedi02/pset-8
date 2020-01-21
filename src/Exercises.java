@@ -119,9 +119,21 @@ for (int i = 1; i < numbers.length - 1; i++) {
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
+		if (numbers == null || numbers.length < 1) {
+		    return false;
+		}
+		int counter = 0;
+		for (int value : numbers) {
+		    if (value == x) {
+		        counter++;
+		    }
+		}
+		if (counter == numbers.length) {
+		    return true;
+		}
 		// write your code here
 
-		return false;	// default return value to ensure compilation
+			// default return value to ensure compilation
 	}
 
 	public boolean consecutive(int[] numbers) {

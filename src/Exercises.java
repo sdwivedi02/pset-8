@@ -212,8 +212,28 @@ for (int i = 0; i < numbers.length; i++) {
 	}
 
 	public int clumps(String[] values) {
+		try {
+	List<String> list = Arrays.asList(values);
+} catch (NullPointerException e) {
 		// write your code here
 
 		return -1;		// default return value to ensure compilation
+	}
+	if (values == null) {
+			return -1;
+		}
+
+		boolean clumps = false;
+		int count = 0;
+		for (int i = 0; i < values.length - 1; i++) {
+			if (values[i].equals(values[i + 1]) && !clumps) {
+				clumps = true;
+				count++;
+			} else if (!values[i].equals(values[i + 1])) {
+				clumps = false;
+			}
+		}
+
+		return count;
 	}
 }

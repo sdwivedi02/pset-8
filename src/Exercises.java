@@ -10,15 +10,24 @@ public class Exercises {
 		    return true;
 		}
 
-		return false;
-	}
-
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public String[] endsMeet(String[] values, int n) {
+		if (values == null || values.length < n || n < 1) {
+			return new String[0];
+		}
+
+		String[] firstN = Arrays.copyOfRange(values, 0, n);
+		String[] lastN = Arrays.copyOfRange(values, values.length - n, values.length);
+		String[] resultArray = new String[n * 2];
+		System.arraycopy(firstN, 0, resultArray, 0, n);
+		System.arraycopy(lastN, 0, resultArray, n, n);
+
+		return resultArray;
+	}
 		// write your code here
 
 		return null;	// default return value to ensure compilation

@@ -30,14 +30,40 @@ public class Exercises {
 	}
 		// write your code here
 
-		return null;	// default return value to ensure compilation
-	}
+	// default return value to ensure compilation
 
 	public int difference(int[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 1) {
+			return -1;
+		}
+		int min = 0;
+		int max = 0;
 
-		return -1;		// default return value to ensure compilation
+		if (numbers.length > 0) {
+			min = numbers[0];
+
+			for (int number : numbers) {
+				if (number < min) {
+					min = number;
+				}
+			}
+		}
+
+		if (numbers.length > 0) {
+			max = numbers[0];
+
+			for (int number : numbers) {
+				if (number > max) {
+					max = number;
+				}
+			}
+		}
+
+		return max - min;
 	}
+		// write your code here
+		// default return value to ensure compilation
+
 
 	public double biggest(double[] numbers) {
 		// write your code here

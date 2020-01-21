@@ -89,10 +89,19 @@ public class Exercises {
 		// default return value to ensure compilation
 
 	public String[] middle(String[] values) {
+		if (values == null || values.length < 3 || values.length % 2 == 0) {
+            return new String[0];
+        }
+
+	    String first = values[((values.length - 1) / 2) - 1];
+	    String middle = values[((values.length - 1) / 2)];
+	    String last = values[((values.length - 1) / 2) + 1];
+
+		return new String[] {first, middle, last};
+	}
 		// write your code here
 
-		return null;	// default return value to ensure compilation
-	}
+	// default return value to ensure compilation
 
 	public boolean increasing(int[] numbers) {
 		// write your code here

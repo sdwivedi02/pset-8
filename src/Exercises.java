@@ -148,7 +148,20 @@ for (int i = 0; i < 2; i++) {
 					}
 		}
 }
-	
+counter = 0;
+			for (int i = 0; i < 3; i++) {
+					counter = 0;
+					for (int j = i; j < numbers.length; j += 3) {
+							if (numbers[j] == x) {
+									counter++;
+							}
+					}
+					if (counter == numbers.length / 3) {
+							return true;
+					}
+			}
+
+	return false;
 		// write your code here
 
 			// default return value to ensure compilation

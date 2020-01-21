@@ -9,10 +9,7 @@ public class Exercises {
 		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
 		    return true;
 		}
-
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public String[] endsMeet(String[] values, int n) {
@@ -28,9 +25,6 @@ public class Exercises {
 
 		return resultArray;
 	}
-		// write your code here
-
-	// default return value to ensure compilation
 
 	public int difference(int[] numbers) {
 		if (numbers == null || numbers.length < 1) {
@@ -61,9 +55,6 @@ public class Exercises {
 
 		return max - min;
 	}
-		// write your code here
-		// default return value to ensure compilation
-
 
 	public double biggest(double[] numbers) {
 		if (numbers == null || numbers.length < 3 || numbers.length % 2 == 0) {
@@ -85,8 +76,6 @@ public class Exercises {
 		}
 		return max;
 	}
-		// write your code here
-		// default return value to ensure compilation
 
 	public String[] middle(String[] values) {
 		if (values == null || values.length < 3 || values.length % 2 == 0) {
@@ -99,9 +88,6 @@ public class Exercises {
 
 		return new String[] {first, middle, last};
 	}
-		// write your code here
-
-	// default return value to ensure compilation
 
 	public boolean increasing(int[] numbers) {
 		if (numbers == null || numbers.length < 3) {
@@ -113,9 +99,7 @@ for (int i = 1; i < numbers.length - 1; i++) {
 				return true;
 		}
 }
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
@@ -162,9 +146,6 @@ counter = 0;
 			}
 
 	return false;
-		// write your code here
-
-			// default return value to ensure compilation
 	}
 
 	public boolean consecutive(int[] numbers) {
@@ -182,9 +163,7 @@ counter = 0;
 				return true;
 			}
 		}
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public boolean balance(int[] numbers) {
@@ -206,18 +185,14 @@ for (int i = 0; i < numbers.length; i++) {
 				return true;
 		}
 }
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public int clumps(String[] values) {
 		try {
 	List<String> list = Arrays.asList(values);
 } catch (NullPointerException e) {
-		// write your code here
-
-		return -1;		// default return value to ensure compilation
+		return -1;
 	}
 	if (values == null) {
 			return -1;

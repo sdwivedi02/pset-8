@@ -131,6 +131,24 @@ for (int i = 1; i < numbers.length - 1; i++) {
 		if (counter == numbers.length) {
 		    return true;
 		}
+		counter = 0;
+for (int i = 0; i < 2; i++) {
+		for (int j = i; j < numbers.length; j += 2) {
+				if (numbers[j] == x) {
+						counter++;
+				}
+		}
+		if (numbers.length % 2 == 1 && numbers[0] == x && numbers[numbers.length - 1] == x) {
+				if (counter == ((numbers.length + 1) / 2)) {
+							return true;
+					}
+		} else {
+				if (counter == numbers.length / 2) {
+							return true;
+					}
+		}
+}
+	
 		// write your code here
 
 			// default return value to ensure compilation

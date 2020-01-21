@@ -168,6 +168,20 @@ counter = 0;
 	}
 
 	public boolean consecutive(int[] numbers) {
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
+
+		int j;
+		int k;
+		for (int i = 0; i < numbers.length - 2; i++) {
+			j = i + 1;
+			k = i + 2;
+			if ((numbers[i] % 2 == 0 && numbers[j] % 2 == 0 && numbers[k] % 2 == 0)
+					|| (numbers[i] % 2 == 1 && numbers[j] % 2 == 1 && numbers[k] % 2 == 1)) {
+				return true;
+			}
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation

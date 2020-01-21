@@ -66,10 +66,27 @@ public class Exercises {
 
 
 	public double biggest(double[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 3 || numbers.length % 2 == 0) {
+			return -1;
+		}
 
-		return -1;		// default return value to ensure compilation
+		double max;
+		double first = numbers[0];
+		double middle = numbers[numbers.length / 2];
+		double last = numbers[numbers.length - 1];
+
+		double[] three = { first, middle, last };
+
+		max = three[0];
+		for (int i = 0; i < three.length; i++) {
+			if (three[i] > max) {
+				max = three[i];
+			}
+		}
+		return max;
 	}
+		// write your code here
+		// default return value to ensure compilation
 
 	public String[] middle(String[] values) {
 		// write your code here
